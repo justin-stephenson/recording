@@ -1,10 +1,11 @@
 ---
-sssd_scopes: {
-  "all": "all",
-  "some": "some",
-  "none": "none",
-}
-session_recording_writer: {
-  "rsyslog": "syslog",
-  "journal": "journal"
-}
+__recording_packages:
+  - tlog
+  - sssd
+__recording_sssd_scopes:
+  all: "all"
+  some: "some"
+  none: "none"
+__recording_writer:
+  rsyslog: "syslog"
+  journal: "journal"
