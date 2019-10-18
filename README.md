@@ -1,7 +1,7 @@
 recording
 =========
 
-This role configures a system for terminal session recording.
+This role configures a system for [Terminal session recording](https://github.com/scribery).
 
 Requirements
 ------------
@@ -80,20 +80,11 @@ out while developing.  This is best done by installing molecule in a virtualenv:
 
   `$ source .venv/bin/activate`
 
-  `$ pip install molecule docker`
+  `$ pip install molecule docker selinux`
 
 It is required to run the tests as a user who is authorized to run the 'docker' command
 without using sudo.  This is typically accomplished by adding your user to the 'docker'
 group on your system.
-
-Additionally, there is a challenge around python-libselinux on platforms that use SELinux.
-If you are using a virtualenv, you need to make sure that the selinux python module is
-available in the virtualenv.  Even if it is installed on your ansible controller host
-and the target host, some of the tasks that are delegated to the locahost will use the
-virtualenv.  The selinux module can't be installed via pip.  A workaround for this is
-to copy the entire `selinux` directory from your system site-packages location into
-the virtualenv site-packages.  You also need to copy the `_selinux.so` file from
-site-locations as well.
 
 Once your virtualenv is properly set up, the tests can be run with these commands:
 
