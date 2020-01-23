@@ -35,7 +35,7 @@ Log writer type(output destination) of tlog-rec-session. Possible values are: `r
 
 - `recording_output` (default: `journal`)
 
-ElasticSearch hostname, used when session recording is configured to send to ElasticSearch through rsyslog:
+Elasticsearch hostname, used when session recording is configured to send to Elasticsearch through rsyslog:
 
 - `recording_elastic_host` (default: `localhost`)
 
